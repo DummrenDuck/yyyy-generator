@@ -1,0 +1,31 @@
+<!-- I wrote this shit code in 10 minutes don't hit me -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ЫЫЫЫЫЫ</title>
+	<script>
+		function pageLoaded() {
+			
+		}
+		
+		function generate() {
+			var array = ['ы', 'ъ', 'ь'];
+			
+			document.getElementById('ass').innerHTML = '';
+			
+			for (var i = 0; i < parseInt(document.getElementById('count').value); i++) {
+				document.getElementById('ass').innerHTML += array[Math.floor(Math.random() * 3)];
+			}
+		}
+	</script>
+</head>
+
+<body onload="pageLoaded()">
+	<p id="ass"></p>
+	<input type="number" id="count" placeholder="количество ыъьъы">
+	<input type="button" value="сгенерировать" onclick="generate()">
+</body>
+
+</html>
