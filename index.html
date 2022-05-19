@@ -5,6 +5,9 @@
 
 <head>
 	<title>ЫЫЫЫЫЫ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="styles.css">
+	<script src="helper.js"></script>
 	<script>
 		function pageLoaded() {
 			
@@ -16,24 +19,37 @@
 			
 			var array = document.getElementById('type1').checked ? array1 : array2;
 			
-			document.getElementById('ass').innerHTML = '';
+			document.getElementById('output').innerHTML = '';
 			
 			for (var i = 0; i < parseInt(document.getElementById('count').value); i++) {
-				document.getElementById('ass').innerHTML += array[Math.floor(Math.random() * array.length)];
+				document.getElementById('output').innerHTML += array[Math.floor(Math.random() * array.length)];
 			}
 		}
 	</script>
 </head>
 
 <body onload="pageLoaded()">
-	<label><input type="radio" name="type" id="type1" checked>ыъь</label>
-	<br>
-	<label><input type="radio" name="type" id="type2">аряря ыаа</label>
-	<hr>
-	<input type="number" id="count" placeholder="количество">
-	<input type="button" value="сгенерировать" onclick="generate()">
-	<hr>
-	<p style="word-wrap: break-word" id="ass"></p>
+	<div class="page-div">
+		
+		<h5>Режим:</h5>
+		
+		<label><input type="radio" name="type" id="type1" checked> Ыъь</label>
+		<label><input type="radio" name="type" id="type2"> Аряря ыаа</label>
+		
+		<hr>
+		
+		<h5>Параметры:</h5>
+		
+		<input type="number" id="count" placeholder="Количество">
+		<input type="button" value="Сгенерировать" onclick="generate()">
+		
+		<hr>
+		
+		<h5>Вывод:</h5>
+		
+		<p class="output" id="output">Здесь будет текст :3</p>
+		
+	</div>
 </body>
 
 </html>
