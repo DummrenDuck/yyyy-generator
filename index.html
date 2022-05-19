@@ -1,0 +1,39 @@
+<!-- I wrote this shit code in 10 minutes don't hit me -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>ЫЫЫЫЫЫ</title>
+	<script>
+		function pageLoaded() {
+			
+		}
+		
+		function generate() {
+			var array1 = ['ы', 'ъ', 'ь'];
+			var array2 = ['аряря ', 'ыаа '];
+			
+			var array = document.getElementById('type1').checked ? array1 : array2;
+			
+			document.getElementById('ass').innerHTML = '';
+			
+			for (var i = 0; i < parseInt(document.getElementById('count').value); i++) {
+				document.getElementById('ass').innerHTML += array[Math.floor(Math.random() * array.length)];
+			}
+		}
+	</script>
+</head>
+
+<body onload="pageLoaded()">
+	<label><input type="radio" name="type" id="type1" checked>ыъь</label>
+	<br>
+	<label><input type="radio" name="type" id="type2">аряря ыаа</label>
+	<hr>
+	<input type="number" id="count" placeholder="количество">
+	<input type="button" value="сгенерировать" onclick="generate()">
+	<hr>
+	<p style="word-wrap: break-word" id="ass"></p>
+</body>
+
+</html>
