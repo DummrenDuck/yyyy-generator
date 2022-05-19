@@ -12,6 +12,7 @@
 	--fg-color-sec: #606080;
 	--button-prev: #404050;
 	--button-sec: #506050;
+	--selection: #506050;
 	--text-color: #a0a0c0;
 	--padding-default: 5px;
 	--margin-default: 5px;
@@ -28,6 +29,11 @@
 ::-webkit-scrollbar
 {
 	display: none;
+}
+
+::selection
+{
+	background: var(--selection);
 }
 
 *
