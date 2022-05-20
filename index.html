@@ -16,8 +16,9 @@
 		function generate() {
 			var array1 = ['ы', 'ъ', 'ь'];
 			var array2 = ['аряря ', 'ыаа '];
+			var array3 = ['папит ', 'симплдимпл ', 'сквиш '];
 			
-			var array = document.getElementById('type1').checked ? array1 : array2;
+			var array = document.getElementById('type1').checked ? array1 : (document.getElementById('type2').checked ? array2 : array3);
 			
 			document.getElementById('output').innerHTML = '';
 			
@@ -35,6 +36,7 @@
 		
 		<label><input type="radio" name="type" id="type1" checked> Ыъь</label>
 		<label><input type="radio" name="type" id="type2"> Аряря ыаа</label>
+		<label><input type="radio" name="type" id="type3"> Папит симплдимпл сквиш</label>
 		
 		<hr>
 		
